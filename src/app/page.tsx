@@ -21,7 +21,7 @@
 import Intro from "./components/Intro"
 export default function Home() {
   return (
-    <main className="h-screen overflow-hidden bg-[#090a0f]">
+    <main className="h-screen overflow-hidden">
       <Intro />
     </main>
   );

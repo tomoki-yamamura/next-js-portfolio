@@ -1,10 +1,13 @@
 import React from "react";
-import "../../styles/Intro.module.css";
+import "../../styles/intro.css";
 
 const Intro = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center" id="stars">
-      <p className=" text-white">A few days ago, during...</p>;
+    <div className="h-full overflow-hidden bg-[#090a0f] relative">
+      <p className="text-[#4ee] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-white sm:text-xl md:text-2xl lg:text-4xl font-extrabold">Hello, I'm Software Engineer...</p>;
+      <div
+        id="stars"
+      ></div>
     </div>
   );
 };
