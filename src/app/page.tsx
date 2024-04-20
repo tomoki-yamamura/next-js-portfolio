@@ -18,11 +18,37 @@
 //     </main>
 //   );
 // }
+"use client"
+import { useEffect, useState } from "react";
 import Intro from "./components/Intro"
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2 * 1000);
+  }, [])
+
+  return(
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      {isLoading ?
+      <div>
+         //Load中の処理
+      </div>
+      : <div>
+         //Load後の処理
+      </div>
+      }
+    </Layout>
+  )
+
   return (
-    <main className="h-screen overflow-hidden">
+    {isLoading ?
       <Intro />
-    </main>
-  );
+    }
+  )
 };
